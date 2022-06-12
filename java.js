@@ -91,8 +91,37 @@
 //   document.write(factorialize(5))
 
 // Q7
+
+
+// function num(){
+//     var start= +prompt("starting no");
+//     var end =  +prompt("end no");
+//     for(i=start ; i <= end ; i++){
+//         document.write (i);
+//         document.write("<br>");
+//     }
+
+
+
+
+// }
+// num();
 // Q8
+
+
+// function hypotenuse(){
+//     var base= +prompt("base ");
+//     var per= +prompt(" prependicular");
+//     var base2= (base * base);
+//     var per2 = per * per;
+//     var hyp2 = base2 +  per2;
+// var hyp = Math.sqrt(hyp2) ;
+// document.write (" hypotenuse of aright angle is  " + hyp);
+
+// }
+// hypotenuse();
 // Q9
+
 // Q10
 		
 // function validatePalin(str) {
@@ -109,7 +138,23 @@
 
 
 // Q11
+
+// var w=prompt("Enter the width of rectangle");
+// var h=prompt("Enter the height of rectangle");
+// var result=Area(w,h);
+// document.write("The area of rectangle is: "+result);
+//  function Area(w,h)
+//  {
+//      w=parseFloat(w);
+//      h=parseFloat(h)
+//      var a=w*h;
+//      return a;
+//  }
+
+//  Area();
+
 // Q12
+
 // function find_longest_word(str)
 // {
 //   var array1 = str.match(/\w[a-z]{0,}/gi);
@@ -125,8 +170,44 @@
 //   return result;
 // }
 // document.write(find_longest_word('Web Development Tutorial'));
-// Q13
+// Q13 
+// var str=prompt("Enter str");
+// var letter=prompt("Enter letter");
+// var res=char_count(str,letter);
+// document.write(letter+" is "+res+" times");
+// function char_count(str, letter) 
+// {
+//  var letter_Count = 0;
+//  for (var position = 0; position < str.length; position++) 
+//  {
+//     if (str.charAt(position) == letter) 
+//       {
+//       letter_Count += 1;
+//       }
+//   }
+//   return letter_Count;
+// }
+
+// char_count();
+
 // Q14
+
+//var radius=prompt("Enter the radius");
+// radius=parseInt(radius);
+// calcCircumference(radius);
+// calcArea(radius);
+// function calcCircumference(radius)
+// {
+//     var c=2*(3.14)*radius;
+//     document.write("The crcumference is: "+c+"<br>");
+// }
+// function calcArea(radius)
+// {
+//     var a=(3.14*radius*radius);
+//     document.write("The radius is: "+a);
+// }
+
+//calcCircumference();
 
 
 // date methods
@@ -237,12 +318,83 @@
 //     document.write("It's AM")
 // }
 // Q8
+// var month = 11; 
+// var laterdate = new Date(2022, month + 1, 0);
+// document.write("later date"+laterdate);
+
 // Q9
+// var num1=new Date(2022,3,2);
+//  var num2=new Date();
+//  sdr=num1.getTime();
+//  edr=num2.getTime();
+//  var num=Math.floor(((edr-sdr) / (1000 * 60 * 60 * 24)));
+//  document.write(num+" days have passed since "+num1);
 // Q10
+// var num1=new Date(2022,0,1);
+//  var num1c=num1.getTime();
+//  var num2=new Date();
+// var num2c=num2.getTime();
+//  var diff=num2c-num1c;
+// var secPassed=Math.floor((diff/1000));
+//  document.write("On reference date "+num1+"  "+secPassed+" seconds  "+" had passed since beginning of 2020");
+
+
 // Q11
+
+// var currentDate=new Date();
+//  var getHours=currentDate.getTime();
+// var currentTime=Math.floor(getHours/(1000*60*60));
+// var getHours=getHours+(1000*60*60);
+//  var incrementedTime=Math.floor(getHours/(1000*60*60));
+//  var diff=incrementedTime-currentTime;
+// diff--;
+//  var newDate=new Date();
+// newDate.setHours(diff);
+//  document.write(" date: "+currentDate+"<br>"+"One hour ahead: "+newDate);
+
+
 // Q12
+// var date = new Date()
+//  var current=date.getFullYear();
+//  var YearBack100=current-100;
+//  var YearBack100Date=new Date();
+//  YearBack100Date.setFullYear(YearBack100);
+//  alert("Current Date:"+date+"\n"+"100 years back"+YearBack100Date);
 // Q13
+
+// var age=prompt("Enter your age?");
+// age=parseInt(age);
+//  var date=new Date();
+//  var currentYear=date.getFullYear();
+//  var HisAge=currentYear-age;
+//  var dateofBirth=new Date(HisAge);
+//  var yearDate=dateofBirth.setFullYear(HisAge);
+//  var YearOfdateofBirth=dateofBirth.getFullYear();
+//  document.write("Your age is: "+HisAge+"<br>"+"Year of date of birth is: "+YearOfdateofBirth);
+
 // Q14
+
+// var name=prompt("Enter your name?");
+// var month=prompt("Enter the month?");
+// var units=prompt(name+" Please! Enter the units consumed in the month of "+month+"?");
+// units=parseFloat(units);
+// var chargesPerUnit=prompt(name+" Please enter the charges per unit?");
+// chargesPerUnit=parseFloat(chargesPerUnit);
+
+// var netAmountPayable=units*chargesPerUnit;
+// var NetAmountPayable=netAmountPayable.toFixed(2);
+// var LatePaymentSurcharge=(10/100)*NetAmountPayable;
+// var latePaymentSurcharge=LatePaymentSurcharge.toFixed(2);
+// var GrossAmountPayable=netAmountPayable+LatePaymentSurcharge;
+// GrossAmountPayable=GrossAmountPayable.toFixed(2);
+
+// var finalUnits=units.toFixed(2); 
+// var finalChargesPerUnit=chargesPerUnit.toFixed(2);
+
+// document.write("Customer Name: "+name+"<br>"+"Month: "+month+"<br>"+"Number of units: "
+// +finalUnits+"<br>"+"Charges per unit: "+finalChargesPerUnit+"<br><br><br>"+"Net Amount"+
+// "Payable (within due date) :"+NetAmountPayable+"<br>LatePaymentSurcharge :"+latePaymentSurcharge+
+// "<br>Gross Amount Payable (After due date): "+GrossAmountPayable);
 
 
 
